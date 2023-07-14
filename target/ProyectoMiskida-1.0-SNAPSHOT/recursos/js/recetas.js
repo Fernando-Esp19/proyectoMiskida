@@ -1,7 +1,8 @@
 $(document).ready(function () {
   $.get("rc", { "opc": 1 }, function (data) {
+      console.log(data);
     var x = JSON.parse(data);
-
+console.log(x);
     x.forEach(function (item) {
             console.log(item);
       var binaryData = item.imagen.binaryData;

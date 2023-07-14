@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Taily
  */
 public class Conexion {
-    private static final String URL="jdbc:mysql://localhost:3306/proy1integrador?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String URL="jdbc:mysql://localhost:3306/bdmiskida?zeroDateTimeBehavior=CONVERT_TO_NULL";
     private static final String DRIVER="com.mysql.cj.jdbc.Driver";
     private static final String USER="root";
     private static final String PASS="";
