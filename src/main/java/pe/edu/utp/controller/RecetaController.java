@@ -4,29 +4,18 @@
  */
 package pe.edu.utp.controller;
 
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import pe.edu.utp.dao.InsumoDao;
-import pe.edu.utp.dao.PasoDao;
-import pe.edu.utp.dao.RecetaDao;
-import pe.edu.utp.daoImpl.InsumoDaoImpl;
-import pe.edu.utp.daoImpl.PasoDaoImpl;
-import pe.edu.utp.daoImpl.RecetaDaoImpl;
 
 /**
  *
  * @author mafer
  */
 public class RecetaController extends HttpServlet {
-    RecetaDao r=new RecetaDaoImpl();
-    InsumoDao i=new InsumoDaoImpl();
-    PasoDao p=new PasoDaoImpl();
-    private final Gson g = new Gson();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,23 +27,19 @@ public class RecetaController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException { 
-        PrintWriter out = response.getWriter();
-        int op = Integer.parseInt(request.getParameter("opc"));
-        
-        switch(op){
-            case 1:
-                out.println(g.toJson(r.readAll()));
-                break;
-            case 2:
-                out.println(g.toJson(r.read(request.getParameter("nombre_rec"))));
-                break;
-            case 3:
-                out.println(g.toJson(i.read(request.getParameter("nombre_rec"))));
-                break;
-            case 4:
-                out.println(g.toJson(p.read(request.getParameter("nombre_rec"))));
-                break;
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet RecetaController</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet RecetaController at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
