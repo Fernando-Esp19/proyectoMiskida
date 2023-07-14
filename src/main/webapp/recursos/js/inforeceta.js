@@ -209,6 +209,11 @@ btnIniciarProcedimiento.addEventListener("click", function() {
   if (recetaArray.length > 0) {
     // Obtener el primer paso de la receta
     var primerPaso = recetaArray[0];
+        if (recetaArray[0] ===0.000) {
+            
+        } else {
+            primerPaso.cantidad = "";
+        }
 
     // Crear el cuadro de diálogo para mostrar el primer paso
     $("<div></div>")
@@ -238,10 +243,17 @@ function mostrarSiguientePaso() {
   if (recetaArray.length > 0) {
     // Obtener el siguiente paso de la receta
     var siguientePaso = recetaArray[0];
-
+    console.log(siguientePaso.cantidad);
+        
+    
     // Crear un cuadro de diálogo para mostrar el siguiente paso
     var dialogo = $("<div></div>").attr("title", "Siguiente Paso de la Receta");
-    var contenido = $("<p></p>").text("Paso: " + siguientePaso.paso+" "+siguientePaso.cantidad+" "+siguientePaso.unidad );
+    if (siguientePaso.cantidad===0) {
+            var contenido = $("<p></p>").text("Paso: " + siguientePaso.paso);
+        } else {
+            var contenido = $("<p></p>").text("Paso: " + siguientePaso.paso+" "+siguientePaso.cantidad+" "+siguientePaso.unidad );
+        }
+    
     dialogo.append(contenido);
 
     // Mostrar el cuadro de diálogo
