@@ -1,0 +1,49 @@
+.receta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.custom-header {
+  background-color: #ffc0cb; /* Color rosa claro */
+}
+table {
+  margin: 0 auto;
+}
+
+.receta {
+  display: inline-block;
+  width: 300px;
+  height: 350px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  position: relative;
+}
+
+.receta img {
+  width: 280px;
+  height: 250px;
+}
+
+
+.vista {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f9a825;
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 10px;
+    width: 300px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-centralizado {
+  text-align: center;
+}

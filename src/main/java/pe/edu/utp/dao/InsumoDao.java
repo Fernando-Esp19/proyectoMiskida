@@ -5,16 +5,13 @@
 package pe.edu.utp.dao;
 
 import java.util.List;
-import pe.edu.utp.dto.venta;
+import pe.edu.utp.dto.Insumo;
 
 /**
  *
  * @author mafer
  */
-public interface ventadao {
-    int create(venta v);
-    int update(venta v);
-    int delete(int id_dv);
-    venta read(int id_dv);
-    List<venta> readAll();
+public interface InsumoDao {
+    List<Insumo> read(String nombre_rec);
 }
+    

@@ -5,16 +5,12 @@
 package pe.edu.utp.dao;
 
 import java.util.List;
-import pe.edu.utp.dto.cliente;
+import pe.edu.utp.dto.Paso;
 
 /**
  *
  * @author mafer
  */
-public interface clientedao {
-    int create(cliente c);
-    int update(cliente c);
-    int delete(String dni);
-    cliente read(String dni);
-    List<cliente> readAll();
+public interface PasoDao {
+    List<Paso> read(String nombre_rec);
 }

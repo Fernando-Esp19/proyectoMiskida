@@ -5,16 +5,13 @@
 package pe.edu.utp.dao;
 
 import java.util.List;
-import pe.edu.utp.dto.producto;
+import pe.edu.utp.dto.Receta;
 
 /**
  *
  * @author mafer
  */
-public interface productodao {
-    int create(producto p);
-    int update(producto p);
-    int delete(String cod);
-    producto read(String cod);
-    List<producto> readAll();
+public interface RecetaDao {
+    Receta read(String nombre_rec);
+    List<Receta> readAll();
 }
