@@ -24,9 +24,12 @@
             <a class="nav-link" href="#">+ Calculadora Lista</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Reporte</a>
+            <a class="nav-link" id="reporte-link" href="#">Reporte</a>
           </li>
         </ul>
       </div>
     </div>
+    
+    
 </header>
+

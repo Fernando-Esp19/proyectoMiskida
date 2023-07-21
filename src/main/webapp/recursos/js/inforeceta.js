@@ -216,25 +216,61 @@ btnIniciarProcedimiento.addEventListener("click", function() {
         }
 
     // Crear el cuadro de diálogo para mostrar el primer paso
-    $("<div></div>")
-      .attr("title", "Primer Paso de la Receta")
-        
-      .html("<p>Paso: " + primerPaso.paso+" "+primerPaso.cantidad+" "+primerPaso.unidad + "</p>")
-      .dialog({
-        modal: true,
-        buttons: {
-          Siguiente: function() {
-            // Cerrar el cuadro de diálogo
-            $(this).dialog("close");
-            
-            // Remover el primer paso de la receta
-            recetaArray.shift();
-
-            // Mostrar el siguiente paso (si hay alguno)
-            mostrarSiguientePaso();
-          }
+    
+     // Crear un cuadro de diálogo para mostrar el siguiente paso
+    var dialogo = $("<div></div>").attr("title", "Primer Paso de la Receta");
+    if (primerPaso.cantidad===0) {
+            var contenido = $("<p></p>").text("Paso: " + primerPaso.paso);
+        } else {
+            var contenido = $("<p></p>").text("Paso: " + primerPaso.paso+" "+primerPaso.cantidad+" "+primerPaso.unidad );
         }
-      });
+        var temporizadorDiv = $("<div></div>").text("Tiempo restante:" + primerPaso.duracion + " segundos");
+        contenido.append(temporizadorDiv);
+
+        dialogo.append(contenido);
+    
+    
+    
+    
+    
+    
+   var duracionPaso = primerPaso.duracion;
+        var intervalo = null;
+
+// Función para actualizar el temporizador
+        function actualizarTemporizador() {
+            if (duracionPaso > 0) {
+                temporizadorDiv.text("Tiempo restante: " + duracionPaso + " segundos");
+                duracionPaso--;
+            } else {
+                clearInterval(intervalo);
+            }
+        }
+        
+        
+    
+// Iniciar el temporizador
+        actualizarTemporizador();
+        intervalo = setInterval(actualizarTemporizador, 1000); // Actualizar cada segundo (1000 ms)
+        // Mostrar el cuadro de diálogo
+    dialogo.dialog({
+      modal: true,
+      buttons: {
+        Siguiente: function() {
+          // Cerrar el cuadro de diálogo
+          $(this).dialog("close");
+          
+          // Remover el siguiente paso de la receta
+          recetaArray.shift();
+
+          // Mostrar el siguiente paso (si hay alguno)
+          mostrarSiguientePaso();
+        }
+      }
+    });
+      
+      
+      
   }
 });
 // Función para mostrar el siguiente paso de la receta
@@ -253,8 +289,36 @@ function mostrarSiguientePaso() {
         } else {
             var contenido = $("<p></p>").text("Paso: " + siguientePaso.paso+" "+siguientePaso.cantidad+" "+siguientePaso.unidad );
         }
+        var temporizadorDiv = $("<div></div>").text("Tiempo restante:" + siguientePaso.duracion + " segundos");
+        contenido.append(temporizadorDiv);
+
+        dialogo.append(contenido);
+        
+        
+        
+        
+        var duracionPaso = siguientePaso.duracion;
+        var intervalo = null;
+
+// Función para actualizar el temporizador
+        function actualizarTemporizador() {
+            if (duracionPaso > 0) {
+                temporizadorDiv.text("Tiempo restante: " + duracionPaso + " segundos");
+                duracionPaso--;
+            } else {
+                clearInterval(intervalo);
+            }
+        }
+        
+        
     
-    dialogo.append(contenido);
+// Iniciar el temporizador
+        actualizarTemporizador();
+        intervalo = setInterval(actualizarTemporizador, 1000); // Actualizar cada segundo (1000 ms)
+
+
+
+
 
     // Mostrar el cuadro de diálogo
     dialogo.dialog({

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
   $.get("rc", { "opc": 1 }, function (data) {
       console.log(data);
     var x = JSON.parse(data);

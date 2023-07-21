@@ -4,9 +4,17 @@
         <servlet-name>RecetaController</servlet-name>
         <servlet-class>pe.edu.utp.controller.RecetaController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteController</servlet-name>
+        <servlet-class>pe.edu.utp.controller.ReporteController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RecetaController</servlet-name>
         <url-pattern>/rc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteController</servlet-name>
+        <url-pattern>/rec</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
