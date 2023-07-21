@@ -73,11 +73,7 @@ public class ReporteController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            registros.crearExcel();
-        } catch (SQLException ex) {
-            Logger.getLogger(registrocontroller.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         processRequest(request, response);
     }
 
