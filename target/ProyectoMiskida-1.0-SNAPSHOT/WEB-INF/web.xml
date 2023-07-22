@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>CalculadoraInsumoController</servlet-name>
-        <servlet-class>pe.edu.utp.Controller.CalculadoraInsumoController</servlet-class>
+        <servlet-name>RecetaController</servlet-name>
+        <servlet-class>pe.edu.utp.controller.RecetaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReporteController</servlet-name>
+        <servlet-class>pe.edu.utp.controller.ReporteController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CalculadoraInsumoController</servlet-name>
-        <url-pattern>/CC</url-pattern>
+        <servlet-name>RecetaController</servlet-name>
+        <url-pattern>/rc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteController</servlet-name>
+        <url-pattern>/rec</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
