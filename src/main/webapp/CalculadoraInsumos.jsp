@@ -1,9 +1,3 @@
-<%-- 
-    Document   : CalculadoraInsumos
-    Created on : 11 jul. 2023, 23:18:48
-    Author     : Taily
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,19 +6,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-        <link href="css/EstiloRegistros.css" rel="stylesheet" type="text/css"/>
+        <link href="recursos/css/EstiloRegistros.css" rel="stylesheet" type="text/css"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
+
     </head>
     <body>
-        
-        
+
+        <jsp:include page="Header.jsp" />
         <div class="Contenedor-formularioP contenedor">
             <div class="texto-formularioP">
                 <h2>Formulario de Insumos</h2>
             </div>
 
-            <form id="formularioInsumos" action="CC" method="Post">
+            <form id="formularioInsumos" method="Post">
                 <div class="input">
                     <label for="insumo">Insumo:</label>
                     <input type="text" id="insumo" name="insumo" required>
@@ -44,9 +38,11 @@
                     </div>
                 </div>
                 <div class="inputb">
-                    <input type="submit" name="menu" value="Calcular">
-                    <input type="submit" value="Cancelar">
-                    <input type="submit" name ="menu" id="Agregar" value="Agregar">
+                    <input type="submit" class="boton-submit" name="menu" value="Calcular">
+                    <input type="submit" class="boton-submit" value="Cancelar">
+                    <input type="submit" class="boton-submit" name ="menu" id="Agregar" value="Agregar">
+                    <input type="submit" class="boton-submit" name ="menu" id="Subir" value="Subir">
+                   
                 </div>
             </form>
 
@@ -59,13 +55,24 @@
                     var cantidadAlmacenada = parseInt(document.getElementById("cantidadAlmacenada").value);
                     var cantidadFaltante = Math.max(cantidadNecesaria - cantidadAlmacenada, 0);
 
-                    
+
                     document.getElementById("cantidadFaltante").value = cantidadFaltante;
 
+                    var arraydatos = [];
                     $("#Agregar").click(function () {
-                        $.get("CC", {"opc": 1, "cantidadf": cantidadFaltante, "cantidada": cantidadAlmacenada, "cantidadn": cantidadNecesaria, "nombre": insumo}, function () {
+
+                        arraydatos.push({insumo, cantidadNecesaria, cantidadAlmacenada, cantidadFaltante});
+
+
+                        $.post("RC", {"cantidadf": cantidadFaltante, "cantidada": cantidadAlmacenada, "cantidadn": cantidadNecesaria, "nombre": insumo}, function () {
                         });
-                        limpiar();
+                        // Agregar los datos al reporte de Excel
+                        reporte.agregarDatos(insumo, cantidadNecesaria, cantidadAlmacenada, cantidadFaltante);
+
+                        // Generar el archivo de Excel y guardar en disco (u otra ubicación)
+                        reporte.generarReporte();
+
+                        limpiar(); //
                     });
 
                 });

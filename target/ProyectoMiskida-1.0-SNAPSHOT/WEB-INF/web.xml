@@ -4,9 +4,25 @@
         <servlet-name>CalculadoraInsumoController</servlet-name>
         <servlet-class>pe.edu.utp.Controller.CalculadoraInsumoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AgregarController</servlet-name>
+        <servlet-class>pe.edu.utp.Controller.AgregarController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubirController</servlet-name>
+        <servlet-class>pe.edu.utp.Controller.SubirController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CalculadoraInsumoController</servlet-name>
         <url-pattern>/CC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AgregarController</servlet-name>
+        <url-pattern>/ac</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubirController</servlet-name>
+        <url-pattern>/sc</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,0 +1,111 @@
+:root{
+    --colorcelestecla:#FEE5DE;
+    --cl:#D8F4FF;
+    --colorcelesteos: #FE919E;
+    --color:#009DB6;
+    --fuente:'Quicksand', sans-serif;;
+}
+
+
+
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing:inherit;
+}
+body{
+    font-family: var(--fuente);
+    background-color: var(--colorcelestecla);
+    display: flex;
+    align-items: center;
+
+}
+h2{
+     font-family: var(--fuente);
+}
+.contenedor{
+    margin:0 auto;
+    max-width: 1200px;
+    width:95%;
+}
+.imagen{
+
+    background-position: center center;
+    background-size: cover; /*Adapte al formulario*/
+    height:200px;
+    flex:0 0 calc(20%); /*40% formulario*/
+    position: relative;
+}
+.imagen::before{
+    content: '';
+    position: absolute;/*hijo, propoedades de top, botoon,left,right*/
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+
+    /*rgba(141,169,196,.5),rgba(19,64,116,.5)*/
+}
+
+@media(min-width:768px){
+    .imagen{
+        height:auto;
+        background-position: right;
+    }
+}
+@media(min-width:1200px){
+    .imagen{
+
+        background-position: center;
+    }
+}
+@media(min-width:768px){
+    .Contenedor-formulario{
+        display: flex;/*ayuda mitad mitad el rectabguo*/
+    }
+}
+
+.formulario{
+    padding:50px; /*dda como gruesor al recuadro*/
+    background-color: var(--colorcelesteos);
+}
+.texto-formulario h2, .input label, .texto-formulario p{
+    color:aliceblue;
+}
+.texto-formulario h2{
+    font-size: 38px;
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+.input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+.input input{
+    width:100%;
+    padding:  10px 16px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.input input[type="submit"]{
+    background-color: #FAB5BA;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: bold; /*letra en negrita*/
+    font-family: var(--fuente);
+    border: none;
+    transition: background-color .3s ease-in-out;
+    margin-top:20px;
+}
+.input input[type="submit"]:hover{
+    cursor: pointer;
+    background-color:#28a0ce  ;
+}
