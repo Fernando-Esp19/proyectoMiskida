@@ -10,19 +10,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../Css/normalize.css" rel="stylesheet" type="text/css"/>
-        <link href="css/EstiloLogin.css" rel="stylesheet" type="text/css"/>
+        <link href="recursos/css/EstiloLogin.css" rel="stylesheet" type="text/css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-        <script src="JS/validarLogin.js" type="text/javascript"></script>
+        <script src="recursos/js/validarLogin.js" type="text/javascript"></script>
         <title>JSP Page</title>
     </head>
     <body>
        
         <div class="Contenedor-formulario contenedor">
              <div class="imagen">
-                 <img  src="recursos/imagenes/miskida2.png" width=700px; height=680px; alt=""/>
-                 
+                
+                 <img src="recursos/imagenes/miskida2.png" width=700px; height=680px; alt=""/>
             </div>
           
             <form class="formulario" action="PVC" method="Post" onsubmit="return validar()">

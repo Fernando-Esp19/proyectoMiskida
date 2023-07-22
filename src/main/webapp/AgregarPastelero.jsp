@@ -14,8 +14,8 @@
         <title>Agregar Pastelero</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-        <link href="css/Estilos.css" rel="stylesheet" type="text/css"/>
-        <script src="JS/validar.js" type="text/javascript"></script>
+        <link href="recursos/css/Estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="recursos/js/validar.js" type="text/javascript"></script>
     </head>
     <body>
         <jsp:include page="Header.jsp" />

@@ -52,9 +52,9 @@ public class PasteleroVController extends HttpServlet {
             p.setContra(contra);
             r = td.validar(p);
             if (r == 1) {
-                request.getRequestDispatcher("CalculadoraInsumos.jsp").forward(request, response);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             } else if (r == 0) {
-                request.getRequestDispatcher("AgregarReceta.jsp").forward(request, response);
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("Agregar.jsp").forward(request, response);
 

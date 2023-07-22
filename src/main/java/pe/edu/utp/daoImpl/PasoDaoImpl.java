@@ -49,8 +49,8 @@ public class PasoDaoImpl implements PasoDao{
             while (rs.next()) {
                 Paso p = new Paso();
                 p.setPaso(rs.getString(1));
-                p.setCantidades(rs.getDouble(2));
-                p.setUnidades2(rs.getString(3));
+                p.setCantidad(rs.getDouble(2));
+                p.setUnidad(rs.getString(3));
                 p.setDuracion(rs.getInt(4));
                 datos.add(p);
             }
@@ -73,12 +73,12 @@ public class PasoDaoImpl implements PasoDao{
                 cx = Conexion.getConexion();
                 cst = cx.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS);
                 cst.setString(1, p.getPaso());
-                cst.setDouble(2, p.getCantidades());
-                String verificaru=p.getUnidades2();
-                if (verificaru.equals(p.getUnidades2())) {
+                cst.setDouble(2, p.getCantidad());
+                String verificaru=p.getUnidad();
+                if (verificaru.equals(p.getUnidad())) {
                 cst.setString(3, "");
             } else {
-                    cst.setString(3, p.getUnidades2());
+                    cst.setString(3, p.getUnidad());
             }
                 
                 cst.setInt(4, p.getDuracion());

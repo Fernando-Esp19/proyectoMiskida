@@ -73,9 +73,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="CalculadoraInsumos.jsp">+ Calculadora Lista</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reporte</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

@@ -12,7 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-        <link href="css/EstiloRegistros.css" rel="stylesheet" type="text/css"/>
+        <link href="recursos/css/EstiloRegistros.css" rel="stylesheet" type="text/css"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </head>
@@ -47,7 +47,7 @@
                     <input type="submit" class="boton-submit" name="menu" value="Calcular">
                     <input type="submit" class="boton-submit" value="Cancelar">
                     <input type="submit" class="boton-submit" name ="menu" id="Agregar" value="Agregar">
-                    <input type="submit" class="boton-submit" name ="menu" id="Subir" value="Subir">
+                  
                    
                 </div>
             </form>

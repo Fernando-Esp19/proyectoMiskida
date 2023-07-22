@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Paso {
     private String nombre_rec;
     private String paso;
-    private double cantidades;
-    private String unidades2;
+    private double cantidad;
+    private String unidad;
     private int duracion;
 }
