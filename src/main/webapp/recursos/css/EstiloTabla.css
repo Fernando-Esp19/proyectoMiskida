@@ -1,0 +1,146 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 jul. 2023, 00:15:44
+    Author     : JOEL
+*/
+/* Universal Reset */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-family: 'Quicksand', sans-serif;
+}
+/* Body Styling */
+body {
+    font-family:'Quicksand', sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #ea9999;
+    padding: 10px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    margin-right: 15px;
+}
+
+ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+/* Add styling for the action buttons */
+
+
+
+/* Common Body Styling */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 30px;
+    padding: 25px;
+    table-layout: fixed;
+}
+
+.table caption {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+.table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    background-color: #ddd;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Responsive Design (Max Width 600px) */
+@media screen and (max-width: 600px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+
+}
+
+

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #ea9999;
+    padding: 10px;
+    
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  ul li {
+    margin-right: 15px;
+  }
+  
+  ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  :root{
+    --colorcelestecla:#B3EEFF;
+    --cl:#D8F4FF;
+    --colorcelesteos: #006691;
+    --color:#FE8098;
+    --fuente:'Quicksand', sans-serif;;
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing:inherit;
+}
+body{
+    font-family: var(--fuente);
+}
+.contenedor{
+    margin:0 auto;
+    max-width: 1200px;
+    width:100%;
+}
+.formularioP{
+    padding:0 20px;
+    width: auto;
+    height: auto;
+    max-height: 800px;
+    max-width: 600px;
+
+    background-color: #ffffff;
+
+    border-style: groove; /*Tipo de la linea en el borde*/
+    border: 2px solid black ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/*espacio entre input*/
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.texto-formularioP h2{
+    background-color: var(--color);
+    background-size: 50px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+
+    margin: 5px 300px;/*Tamaño del titulo pero en margenes*/
+}
+.input {
+    display: flex;
+
+
+    margin: 30px 0px;
+
+    flex-direction: column;
+    width: 260px;
+}
+
+.input label{
+    width: 200px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.input input{
+    font-size: 12px;
+    height: 28px;
+    border-radius: 8px;
+    border:0.2px solid black;
+    padding-left: 6px;
+}
+.inputb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.inputb1{
+    margin-left: 10px;
+    
+}
+.inputb2{
+    margin-left: 10px;
+    
+}
+
+.inputb input[type="submit"]{
+
+    background-color: #009E0F;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold; /*letra en negrita*/
+    border: none;
+    transition: background-color .3s ease-in-out;
+    border-radius: 9px;
+
+    padding:  10px 90px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.inputb input[type="submit"]:hover{
+    cursor: pointer;
+    background-color:#28a0ce  ;
+}
